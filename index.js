@@ -16,6 +16,8 @@ async function processEvent(event, { config, cache }) {
     event.properties['greeting'] = config.greeting
     event.properties['greeting_counter'] = counterValue
     event.properties['random_number'] = await getRandomNumber()
+    
+    console.log('测试插件', event.properties)
     return event
 }
 
